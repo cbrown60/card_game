@@ -1,4 +1,4 @@
-package card;
+package game;
 public enum Suit{
 
   HEARTS,

@@ -1,20 +1,38 @@
+package game;
+import java.util.*;
 
-public abstract class Game{
+public class Game{
+Player player;
+Dealer dealer;
+
+
+public Game(Player player, Dealer dealer){
+  this.player = player;
+  this.dealer = dealer;
+}
+
+
+
+
+public String gameOn(){
+  int playerHand = player.totalHandValue();
+  int dealerHand = dealer.totalHandValue();
+  if(playerHand > dealerHand){
+    return "Player wins";
+  }else{
+    return "Dealer wins";
+  }
+
+}
   
- public void gameStart(){
-  shuffleDeck();
-  dealHand();
-
- }
-
-public void shuffleDeck(){
-
 }
 
-public void dealHand(){
 
-}
 
-}
+// if((playerHand > dealerHand) &&(playerHand < 21)){
+//   return "Player one wins";
+// }else if((dealerHand < playerHand) && (dealerHand < 21)){
+//   return "House wins";
+// }
 
 
